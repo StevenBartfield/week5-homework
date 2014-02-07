@@ -6,14 +6,23 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Oswald:400,700' %>
     <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
   </head>
+
 
 
   <body>
     <div class='container'>
       <div class='page-header'>
-        <%= link_to 'Add a comic book', new_comic_path, class: 'btn btn-success pull-right add' %>
-        <%= link_to 'View all comics', comics_path, class: 'btn btn-primary pull-right add' %>
+        <%= link_to 'Add a comic book', "../comicbin/new", class: 'btn btn-success pull-right add' %>
+        <%= link_to 'View all comics', "../comicbin", class: 'btn btn-primary pull-right add' %>
+        <!-- new_comic_path
+        comics_path -->
+
         <h1 class='logo'>Comic Bin</h1>
       </div>
       <%= yield %>
