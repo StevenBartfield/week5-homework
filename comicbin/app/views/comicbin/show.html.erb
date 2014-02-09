@@ -1,14 +1,8 @@
-
-
-
-
-
 <div class='row'>
   <div class='col-md-5'>
     <!-- INSERT COMIC COVER IMAGE HERE WITH ERB.
          ATTACH THE CLASS of 'img-responsive' TO THIS LINK -->
-         <%= image_tag "#{@comic.image}", :class => "col-md-10" %> 
-
+         <%= image_tag "#{@comic.image}", :class => "img-responsive" %> 
 
   </div>
   <div class='col-md-7'>
@@ -20,9 +14,7 @@
          ATTACH A CLASS of 'btn btn-warning' TO THIS LINK.
          ALSO INCLUDE A CONFIRMATION MESSAGE 'Are you sure?' -->
 
-    <%= link_to "Delete Comic", "/comicbin/delete/#{@comic.id}", :confirm => "Are you sure?", class: 'btn btn-warning pull-left add' %>
-
-    
+    <%= link_to "Delete Comic", "/comicbin/delete/#{@comic.id}", :confirm => "Are you sure?", class: 'btn btn-warning pull-left add' %>    
 
   </div>
 </div>
